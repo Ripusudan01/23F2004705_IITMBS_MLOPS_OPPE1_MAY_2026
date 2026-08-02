@@ -44,8 +44,10 @@ jobs:
           gcloud auth list
 
       - name: Pull DVC Data
+        env:
+          DVC_NO_ANALYTICS: "true"
         run: |
-          dvc pull
+          dvc pull -v --jobs 1
 
       - name: Run Feature Sanity Tests
         run: |
