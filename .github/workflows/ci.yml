@@ -41,7 +41,6 @@ jobs:
       - name: Verify GCP Authentication
         run: |
           gcloud auth list
-          gcloud storage ls
 
       - name: Pull DVC Data
         run: |
